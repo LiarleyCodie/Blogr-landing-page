@@ -1,0 +1,94 @@
+:root {
+    font-family: 'Ubuntu', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.menuItemsList {
+    height: 0;
+    transition-duration: 200ms;
+  }
+
+  .productMenuCheck:checked ~ .menuItemsList {
+    height: auto;
+  }
+
+  .itemTitle img {
+    transition-duration: 200ms;
+  }
+
+  .productMenuCheck:checked ~ .itemTitle img {
+    transform: rotateZ(180deg);
+  }
+
+  .navMenu {
+    transition-duration: 200ms;
+  }
+
+  #openMenu:checked ~ .navMenu {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  #openMenu:checked ~ .openMenuLabel > .closeIcon {
+    display: block;
+  }
+
+  #openMenu:checked ~ .openMenuLabel > .openIcon {
+    display: none;
+  }
+
+  main .section2 {
+    background: 56% -250% / 150% no-repeat url("images/bg-pattern-circles.svg"),
+      linear-gradient(to right, #2e2f41, #3d4063);
+  }
+
+  header {
+    background: 35% 30% / 270% no-repeat url("images/bg-pattern-intro-mobile.svg"),
+      linear-gradient(to bottom, #ff886f, #ff4457);
+  }
+
+  @media screen and (min-width: 768px) {
+    header {
+      background: 30% 52% / 190% no-repeat url("images/bg-pattern-intro-desktop.svg"),
+        linear-gradient(to right, #ff886f 20%, #ff4457);
+    }
+
+    main .section2 {
+      background: -85% 80% / 80% no-repeat url("images/bg-pattern-circles.svg"),
+        linear-gradient(to right, #2e2f41, #3d4063);
+    }
+
+    .menuItem:hover ~ .menuItemsList {
+      visibility: visible;
+      top: 32px;
+      opacity: 1;
+    }
+
+    .menuItemsList {
+      height: auto;
+    }
+
+    .lightArrow {
+      transition-duration: 200ms;
+    }
+
+    .menuItem:hover ~ .lightArrow {
+      transform: rotateZ(180deg);
+    }
+
+    .menuItemsList {
+      visibility: hidden;
+      top: 16px;
+      transition-duration: 200ms;
+      opacity: 0;
+    }
+
+    .menuItemsList:hover ~ .lightArrow {
+      transform: rotateZ(180deg);
+    }
+
+    .menuItemsList:hover {
+      visibility: visible;
+      opacity: 1;
+      top: 32px;
+    }
+  }

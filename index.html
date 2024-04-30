@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogr</title>
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon" />
+    <link rel="stylesheet" href="index.css" />
+    <style>
+      
+    </style>
+  </head>
+  <body class="min-h-screen bg-stone-100">
+    <header
+      class="relative py-12 px-8 md:px-20 rounded-bl-[7rem] h-[80dvh] md:h-[70dvh] text-stone-50"
+    >
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="flex items-center w-full md:w-auto">
+          <img src="images/logo.svg" class="w-20 md:w-auto" alt="logo.svg" />
+        </div>
+        <input type="checkbox" id="openMenu" class="hidden" />
+        <label
+          for="openMenu"
+          class="absolute right-0 mr-8 openMenuLabel md:hidden flex w-10 h-8 justify-center items-center cursor-pointer"
+        >
+          <img src="images/icon-close.svg" class="closeIcon hidden" alt="icon-close.svg" />
+          <img src="images/icon-hamburger.svg" class="openIcon" alt="icon-hamburger.svg" />
+        </label>
+        <nav
+          class="absolute z-10 w-[90%] top-[5rem] md:top-0 md:relative navMenu md:mt-0 mt-6 md:ml-12 md:flex md:items-center md:w-full invisible md:opacity-100 opacity-0 md:visible bg-stone-50 md:bg-transparent px-5 py-4 md:p-0 rounded-md shadow-xl md:shadow-none md:text-base text-lg"
+        >
+          <ul class="md:flex md:gap-8">
+            <li
+              class="relative flex flex-col md:flex-row justify-center md:justify-start items-center gap-1"
+            >
+              <input
+                type="checkbox"
+                id="productMenuCheck1"
+                class="productMenuCheck absolute hidden"
+              />
+              <label
+                for="productMenuCheck1"
+                class="itemTitle w-full md:w-auto menuItem font-medium text-slate-600/80 md:text-stone-50/70 md:hover:text-stone-50 hover:underline decoration-2 flex items-center justify-center gap-2 cursor-pointer py-2"
+              >
+                Product
+                <img src="images/icon-arrow-dark.svg" class="md:hidden md:m-0 mb-[-6px]" />
+              </label>
+
+              <div
+                class="menuItemsList overflow-hidden md:absolute md:left-1/2 md:-translate-x-1/2 md:pt-5 md:w-auto w-full"
+              >
+                <ul
+                  class="bg-stone-200/70 md:bg-slate-50 text-slate-900 flex flex-col w-full md:w-32 rounded-md py-4 md:shadow-xl"
+                >
+                  <li>
+                    <a
+                      class="px-4 md:text-start text-center font-medium md:font-normal text-slate-900/50 md:text-slate-900/80 hover:text-slate-900 md:hover:font-medium py-1 block"
+                      href="#"
+                      rel="noopener noreferrer"
+                      >Overview</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="px-4 md:text-start text-center font-medium md:font-normal text-slate-900/50 md:text-slate-900/80 hover:text-slate-900 md:hover:font-medium py-1 block"
+                      href="#"
+                      rel="noopener noreferrer"
+                      >Pricing</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="px-4 md:text-start text-center font-medium md:font-normal text-slate-900/50 md:text-slate-900/80 hover:text-slate-900 md:hover:font-medium py-1 block"
+                      href="#"
+                      rel="noopener noreferrer"
+                      >Marketplace</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="px-4 md:text-start text-center font-medium md:font-normal text-slate-900/50 md:text-slate-900/80 hover:text-slate-900 md:hover:font-medium py-1 block"
+                      href="#"
+                      rel="noopener noreferrer"
+                      >Features</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="px-4 md:text-start text-center font-medium md:font-normal text-slate-900/50 md:text-slate-900/80 hover:text-slate-900 md:hover:font-medium py-1 block"
+                      href="#"
+                      rel="noopener noreferrer"
+                      >Integrations</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <label for="productMenu" class="invisible hidden md:block md:visible lightArrow">
+                <picture>
+                  <source srcset="images/icon-arrow-dark.svg" media="(max-width: 768px)" />
+                  <img src="images/icon-arrow-light.svg" />
+                </picture>
+              </label>
+            </li>
+
+            <li
+              class="relative flex flex-col md:flex-row justify-center md:justify-start items-center gap-1"
+            >
+              <input
+                type="checkbox"
+                id="productMenuCheck2"
+                class="productMenuCheck absolute hidden"
+              />
+              <label
+                for="productMenuCheck2"
+                class="itemTitle w-full md:w-auto menuItem font-medium text-slate-600/80 md:text-stone-50/70 md:hover:text-stone-50 hover:underline decoration-2 flex items-center justify-center gap-2 cursor-pointer py-2"
+              >
+                Company
+                <img src="images/icon-arrow-dark.svg" class="md:hidden md:m-0 mb-[-6px]" />
+              </label>
+
+              <div
+                class="menuItemsList overflow-hidden md:absolute md:left-1/2 md:-translate-x-1/2 md:pt-5 md:w-auto w-full"
+              >
+                <ul
+                  class="bg-stone-200/70 md:bg-slate-50 text-slate-900 flex flex-col w-full md:w-32 rounded-md py-4 md:shadow-xl"
+                >
+                  <li>
+                    <a
+                      class="px-4 md:text-start text-center font-medium md:font-normal text-slate-900/50 md:text-slate-900/80 hover:text-slate-900 md:hover:font-medium py-1 block"
+                      href="#"
+                      rel="noopener noreferrer"
+                      >About</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="px-4 md:text-start text-center font-medium md:font-normal text-slate-900/50 md:text-slate-900/80 hover:text-slate-900 md:hover:font-medium py-1 block"
+                      href="#"
+                      rel="noopener noreferrer"
+                      >Team</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="px-4 md:text-start text-center font-medium md:font-normal text-slate-900/50 md:text-slate-900/80 hover:text-slate-900 md:hover:font-medium py-1 block"
+                      href="#"
+                      rel="noopener noreferrer"
+                      >Blog</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="px-4 md:text-start text-center font-medium md:font-normal text-slate-900/50 md:text-slate-900/80 hover:text-slate-900 md:hover:font-medium py-1 block"
+                      href="#"
+                      rel="noopener noreferrer"
+                      >Careers</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <label for="productMenu" class="invisible hidden md:block md:visible lightArrow">
+                <picture>
+                  <source srcset="images/icon-arrow-dark.svg" media="(max-width: 768px)" />
+                  <img src="images/icon-arrow-light.svg" />
+                </picture>
+              </label>
+            </li>
+
+            <li
+              class="relative flex flex-col md:flex-row justify-center md:justify-start items-center gap-1"
+            >
+              <input
+                type="checkbox"
+                id="productMenuCheck3"
+                class="productMenuCheck absolute hidden"
+              />
+              <label
+                for="productMenuCheck3"
+                class="itemTitle w-full md:w-auto menuItem font-medium text-slate-600/80 md:text-stone-50/70 md:hover:text-stone-50 hover:underline decoration-2 flex items-center justify-center gap-2 cursor-pointer py-2"
+              >
+                Connect
+                <img src="images/icon-arrow-dark.svg" class="md:hidden md:m-0 mb-[-6px]" />
+              </label>
+
+              <div
+                class="menuItemsList overflow-hidden md:absolute md:left-1/2 md:-translate-x-1/2 md:pt-5 md:w-auto w-full"
+              >
+                <ul
+                  class="bg-stone-200/70 md:bg-slate-50 text-slate-900 flex flex-col w-full md:w-32 rounded-md py-4 md:shadow-xl"
+                >
+                  <li>
+                    <a
+                      class="px-4 md:text-start text-center font-medium md:font-normal text-slate-900/50 md:text-slate-900/80 hover:text-slate-900 md:hover:font-medium py-1 block"
+                      href="#"
+                      rel="noopener noreferrer"
+                      >Contact</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="px-4 md:text-start text-center font-medium md:font-normal text-slate-900/50 md:text-slate-900/80 hover:text-slate-900 md:hover:font-medium py-1 block"
+                      href="#"
+                      rel="noopener noreferrer"
+                      >Newsletter</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="px-4 md:text-start text-center font-medium md:font-normal text-slate-900/50 md:text-slate-900/80 hover:text-slate-900 md:hover:font-medium py-1 block"
+                      href="#"
+                      rel="noopener noreferrer"
+                      >Linkedin</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <label for="productMenu" class="invisible hidden md:block md:visible lightArrow">
+                <picture>
+                  <source srcset="images/icon-arrow-dark.svg" media="(max-width: 768px)" />
+                  <img src="images/icon-arrow-light.svg" />
+                </picture>
+              </label>
+            </li>
+          </ul>
+          <div class="w-full bg-stone-300/70 h-[1px] my-6 md:hidden"></div>
+          <a
+            href="#"
+            rel="noopener noreferrer"
+            class="text-slate-600 font-['Overpass',sans-serif] md:ml-auto md:mr-0 mx-auto md:text-slate-100/70 px-7 rounded-full flex items-center justify-center md:hover:bg-slate-100/30 md:hover:text-slate-100 duration-200 pt-1 md:h-10 h-12 w-36 md:w-fit font-bold hover:bg-slate-600/10"
+            >Login</a
+          >
+          <a
+            href="#"
+            rel="noopener noreferrer"
+            class="font-['Overpass',sans-serif] bg-gradient-to-r from-[#ff886f] md:from-transparent md:to-transparent to-[#ff4457] md:w-fit md:text-red-500 md:bg-slate-100 px-7 rounded-full md:h-10 h-12 w-36 font-bold pt-1 md:mx-0 mx-auto md:mt-0 mt-2 flex items-center justify-center hover:bg-slate-100/30 hover:text-slate-100 duration-200 hover:opacity-70"
+            >Sign Up</a
+          >
+        </nav>
+      </div>
+      <div class="flex flex-col justify-center items-center h-full font-['Overpass',sans-serif]">
+        <h1 class="text-4xl text-center md:text-start md:text-5xl font-semibold">
+          A modern publishing platform
+        </h1>
+        <p class="mt-4 opacity-70 text-lg md:text-start text-center mb-8">
+          Grow your audience and build your online brand
+        </p>
+        <div class="flex gap-4">
+          <a
+            href="#"
+            class="px-4 bg-slate-100 hover:bg-slate-100/40 hover:text-slate-100 duration-200 h-11 flex justify-center items-center rounded-full font-semibold pt-1 text-red-500"
+            >Start for Free</a
+          >
+          <a
+            href="#"
+            class="px-5 bg-transparent border hover:border-transparent hover:bg-slate-100/40 hover:text-slate-100 duration-200 h-11 flex justify-center items-center rounded-full font-semibold pt-1 text-slate-100"
+            >Learn More</a
+          >
+        </div>
+      </div>
+    </header>
+    <main class="bg-stone-100 font-['Overpass',sans-serif]">
+      <section
+        class="section1 overflow-x-hidden pt-28 pb-72 md:pb-56 md:px-20 px-8 relative md:text-start text-center"
+      >
+        <h2 class="text-center text-2xl md:text-3xl md:mb-20 text-slate-700 font-semibold">
+          Designed for the future
+        </h2>
+        <div class="md:w-1/2">
+          <picture
+            class="md:absolute md:my-0 md:top-1/2 md:-translate-y-1/2 md:right-[-13vw] md:w-full md:max-w-[50%]"
+          >
+            <source
+              draggable="false"
+              srcset="images/illustration-editor-desktop.svg"
+              media="(min-width: 768px)"
+            />
+            <img
+              class="w-full md:w-auto my-10"
+              src="images/illustration-editor-mobile.svg"
+              alt="illustration-editor-mobile.svg"
+              draggable="false"
+            />
+          </picture>
+          <h3 class="text-xl mb-4 text-slate-700 font-semibold">
+            Introducing an extensible editor
+          </h3>
+          <p class="text-slate-700 text-base leading-8">
+            Blogr features an exceedingly intuitive interface which lets you focus on one thing:
+            creating content. The editor supports management of multiple blogs and allows easy
+            manipulation of embeds such as images, videos, and Markdown. Extensibility with plugins
+            and themes provide easy ways to add functionality or change the looks of a blog.
+          </p>
+          <h3 class="text-xl mt-16 mb-4 text-slate-700 font-semibold">Robust content management</h3>
+          <p class="text-slate-700 text-base leading-8">
+            Flexible content management enables users to easily move through posts. Increase the
+            usability of your blog by adding customized categories, sections, format, or flow. With
+            this functionality, you're in full control.
+          </p>
+        </div>
+      </section>
+
+      <section
+        class="section2 rounded-tr-[7rem] rounded-bl-[7rem] relative bg-gradient-to-r flex items-center justify-between md:px-28 px-8 from-[#2e2f41] to-[#3d4063] h-[90dvh] md:h-96"
+      >
+        <img
+          class="md:static absolute inset-0 top-[-20%]"
+          src="images/illustration-phones.svg"
+          alt="illustration-phones.svg"
+          draggable="false"
+        />
+        <div class="w-[30rem] mt-auto mb-[6rem] md:mb-0 md:mt-0 md:text-start text-center">
+          <h2 class="text-3xl md:text-3xl mb-4 font-semibold text-slate-100">
+            State of the Art Infrastructure
+          </h2>
+          <p class="text-slate-100 md:text-base text-sm leading-8">
+            With reliability and speed in mind, worldwide data centers provide the backbone for
+            ultra-fast connectivity. This ensures your site will load instantly, no matter where
+            your readers are, keeping your site competitive.
+          </p>
+        </div>
+      </section>
+
+      <section
+        class="section1 overflow-x-hidden md:flex md:justify-end pt-8 md:pt-48 pb-8 md:pb-56 md:px-20 relative md:text-start text-center"
+      >
+        <div class="md:w-1/2">
+          <picture
+            class="md:absolute md:my-0 md:top-1/2 md:-translate-y-1/2 md:left-[-14vw] md:w-full md:max-w-[50%]"
+          >
+            <source
+              draggable="false"
+              srcset="images/illustration-laptop-desktop.svg"
+              media="(min-width: 768px)"
+            />
+            <img
+              class="md:w-auto my-10"
+              src="images/illustration-laptop-mobile.svg"
+              alt="illustration-laptop-mobile.svg"
+              draggable="false"
+            />
+          </picture>
+          <div class="md:px-0 px-8">
+            <h3 class="text-xl mb-4 text-slate-700 font-semibold">Free, open, simple</h3>
+            <p class="text-slate-700 text-base leading-8">
+              Blogr is a free and open source application backed by a large community of helpful
+              developers. It supports features such as code syntax highlighting, RSS feeds, social
+              media integration, third-party commenting tools, and works seamlessly with Google
+              Analytics. The architecture is clean and is relatively easy to learn.
+            </p>
+            <h3 class="text-xl mt-16 mb-4 text-slate-700 font-semibold">Powerful tooling</h3>
+            <p class="text-slate-700 text-base leading-8">
+              Batteries included. We built a simple and straightforward CLI tool that makes
+              customization and deployment a breeze, but capable of producing even the most
+              complicated sites.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="py-16 px-8 md:px-20 bg-[#2e2f41] flex flex-col items-center md:items-start md:flex-row gap-16 md:gap-40 rounded-tr-[7rem]">
+      <div class="w-20 md:w-auto">
+        <img src="images/logo.svg" alt="logo.svg" />
+      </div>
+      <ul class="flex md:items-start items-center flex-col gap-1">
+        <li class="text-slate-100 mb-6 font-medium">Product</li>
+        <li><a class="text-slate-100/60 hover:text-slate-100 duration-200" href="#" rel="noopener noreferrer">Overview</a></li>
+        <li><a class="text-slate-100/60 hover:text-slate-100 duration-200" href="#" rel="noopener noreferrer">Pricing</a></li>
+        <li><a class="text-slate-100/60 hover:text-slate-100 duration-200" href="#" rel="noopener noreferrer">Marketplace</a></li>
+        <li><a class="text-slate-100/60 hover:text-slate-100 duration-200" href="#" rel="noopener noreferrer">Features</a></li>
+        <li><a class="text-slate-100/60 hover:text-slate-100 duration-200" href="#" rel="noopener noreferrer">Integrations</a></li>
+      </ul>
+      <ul class="flex md:items-start items-center flex-col gap-1">
+        <li class="text-slate-100 mb-6 font-medium">Company</li>
+        <li><a class="text-slate-100/60 hover:text-slate-100 duration-200" href="#" rel="noopener noreferrer">About</a></li>
+        <li><a class="text-slate-100/60 hover:text-slate-100 duration-200" href="#" rel="noopener noreferrer">Team</a></li>
+        <li><a class="text-slate-100/60 hover:text-slate-100 duration-200" href="#" rel="noopener noreferrer">Blog</a></li>
+        <li><a class="text-slate-100/60 hover:text-slate-100 duration-200" href="#" rel="noopener noreferrer">Careers</a></li>
+      </ul>
+      <ul class="flex md:items-start items-center flex-col gap-1">
+        <li class="text-slate-100 mb-6 font-medium">Connect</li>
+        <li><a class="text-slate-100/60 hover:text-slate-100 duration-200" href="#" rel="noopener noreferrer">Contact</a></li>
+        <li><a class="text-slate-100/60 hover:text-slate-100 duration-200" href="#" rel="noopener noreferrer">Newsletter</a></li>
+        <li><a class="text-slate-100/60 hover:text-slate-100 duration-200" href="#" rel="noopener noreferrer">Linkedin</a></li>
+      </ul>
+    </footer>
+    <script src="tailwind.js"></script>
+  </body>
+</html>
